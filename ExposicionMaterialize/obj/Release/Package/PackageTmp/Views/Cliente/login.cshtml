@@ -1,0 +1,80 @@
+﻿@model ExposicionMaterialize.Models.Login
+
+@{
+    ViewBag.Title = "login";
+}
+
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<center>
+
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <img src="~/img/logo3.png" class="responsive-img " width="250" height="250">
+  
+    <div class="section"></div>
+
+    <div class="container">
+        <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+
+            <form class="col s12" method="post">
+                <div class='row'>
+                    <div class='col s12'>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        @Html.EditorFor(model => model.Usuario, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Usuario, "", new { @class = "text-danger" })
+                        <label for='usuario'>Ingrese su usuario</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        @Html.EditorFor(model => model.Contrasena, new { htmlAttributes = new { @type = "password" } })
+                        @Html.ValidationMessageFor(model => model.Contrasena, "", new { @class = "text-danger" })
+                        <label for='password'>Ingrese su contraseña</label>
+                    </div>
+                </div>
+
+                <br />
+                <center>
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class='row'>
+                        <button type='submit' value="login" name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Ingresar</button>
+                    </div>
+                </center>
+            </form>
+        </div>
+    </div>
+    <a href=create>Crear cuenta</a>
+    <br />
+</center>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+}
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

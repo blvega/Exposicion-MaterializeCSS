@@ -1,0 +1,32 @@
+﻿.slider .btn {
+    margin-top: 20px;
+}
+
+.section-search input {
+    padding: 5px !important;
+    font-size: 18px !important;
+    width: 90% !important;
+    border: #f4f4f4 3px solid !important;
+}
+
+.section-follow .fa-4x {
+    margin: 5px 10px;
+}
+
+.section-contact h5 {
+    margin-bottom: 30px;
+}
+
+.fullHeigtLeft{
+    height: 100vh
+}
+
+.fullHeigtRight {
+    height: 100vh
+}
+
+@media screen and (max-width: 600px){
+    .fullHeigtLeft{
+        height:100px
+    }
+}

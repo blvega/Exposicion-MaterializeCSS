@@ -1,0 +1,125 @@
+﻿@model ExposicionMaterialize.Models.Cliente
+
+@{
+    ViewBag.Title = "create";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+
+
+    <br />
+  
+        <div class="container">
+            <div class="row">
+
+                <div class="col s6  ">
+                    <div class="slider">
+                        <ul class="slides">
+                            <li>
+                                <img src="~/img/rana.png" class="responsive-img"> <!-- random image -->
+                              
+                            </li>
+                            <li>
+                                <img src="~/img/7.jpg" class="responsive-img"> <!-- random image -->
+                            
+                            </li>
+                            <li>
+                                <img src="~/img/11.jpg"> <!-- random image -->
+                              
+                            </li>
+                          
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col s6 z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE; ">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="row">
+                        <div class="input-field ">
+                            <i class="material-icons prefix">perm_identity</i>
+                            @Html.EditorFor(model => model.IdCliente, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.IdCliente, "", new { @class = "text-danger" })
+                            <label>@Html.LabelFor(model => model.IdCliente, htmlAttributes: new { @class = "control-label col-md-2" })</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field ">
+                            <i class="material-icons prefix">person</i>
+                            @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+                            <label>@Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label col-md-2" })</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field ">
+                            <i class="material-icons prefix">email</i>
+                            @Html.EditorFor(model => model.Correo, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Correo, "", new { @class = "text-danger" })
+                            <label>@Html.LabelFor(model => model.Correo, htmlAttributes: new { @class = "control-label col-md-2" })</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field ">
+                            <i class="material-icons prefix">phone</i>
+                            @Html.EditorFor(model => model.Telefono, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Telefono, "", new { @class = "text-danger" })
+                            <label>@Html.LabelFor(model => model.Telefono, htmlAttributes: new { @class = "control-label col-md-2" })</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field ">
+                            <i class="material-icons prefix">verified_user</i>
+                            @Html.EditorFor(model => model.Usuario, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Usuario, "", new { @class = "text-danger" })
+                            <label>@Html.LabelFor(model => model.Usuario, htmlAttributes: new { @class = "control-label col-md-2" })</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field ">
+                            <i class="material-icons prefix">security</i>
+                            @Html.EditorFor(model => model.Contrasena, new { htmlAttributes = new { @type = "password" } })
+                            @Html.ValidationMessageFor(model => model.Contrasena, "", new { @class = "text-danger" })
+                            <label>@Html.LabelFor(model => model.Contrasena, htmlAttributes: new { @class = "control-label col-md-2" })</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <button type='submit' value="create" name='btn_login' class="waves-effect waves-light btn">Registrarse</button>
+                        </div>
+                    </div>
+                    <br />
+                </div>
+
+            </div>
+
+        </div>
+     
+
+
+        <br />
+
+
+        }
+
+
+
+        @*<div>
+                @Html.ActionLink("Back to List", "Index")
+            </div>*@
+
+
+
+
+        @section Scripts {
+            @Scripts.Render("~/bundles/jqueryval")
+        }

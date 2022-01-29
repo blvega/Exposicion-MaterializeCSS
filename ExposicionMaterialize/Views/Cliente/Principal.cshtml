@@ -1,0 +1,87 @@
+﻿
+@{
+    ViewBag.Title = "Principal";
+}
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<div class="container section ">
+    <div class="row">
+        <h4 class="center">
+            <span class="teal-text">Lugares</span> para reservar
+        </h4>
+        <div class="col s3 m4">
+            <div class="card z-depth-4">
+                <div class="card-image">
+                    <img src="~/img/10.jpg" class="responsive-img">
+                    <span class="card-title">Manuel Antonio</span>
+                </div>
+                <div class="card-content">
+                    <p>
+                        Provincia de Puntarenas, Quepos.
+                    </p>
+                </div>
+                <div class="card-action">
+                    <a href="@Url.Action("createReserva", null, new { name = "Manuel Antonio", controller = "Reserva" }, Request.Url.Scheme)">Reservar</a>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="col s3 m4">
+            <div class="card z-depth-4">
+                <div class="card-image">
+                    <img src="~/img/arenal.jpg" class="responsive-img">
+                    <span class="card-title">Volcán Arenal</span>
+                </div>
+                <div class="card-content">
+                    <p>
+                        Provincia de Alajuela, San Carlos.
+                    </p>
+                </div>
+                <div class="card-action">
+                    <a href="@Url.Action("createReserva", null, new { name = "Volcan Arenal", controller = "Reserva" }, Request.Url.Scheme)">Reservar</a>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="col s3 m4">
+            <div class="card z-depth-4">
+                <div class="card-image">
+                    <img src="~/img/tortuguero.jpg" class="responsive-img">
+                    <span class="card-title">Parque Nacional Tortuguero</span>
+                </div>
+                <div class="card-content">
+                    <p>
+                        Provincia de Limon.
+                    </p>
+                </div>
+                <div class="card-action">
+                    <a href="@Url.Action("createReserva", null, new { name = "Parque Nacional Tortuguero", controller = "Reserva" }, Request.Url.Scheme)">Reservar</a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+
+
+
+
+
+
